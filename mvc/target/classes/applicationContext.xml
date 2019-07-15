@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans    
+ 						 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+ 	
+ 	<!-- <bean id="diyBeanListener" class="com.source.analy.beanDefinitionListener.DiyBeanDefinitionLister"/> -->
+ 	
+ 	 <!-- <bean id="person" class="com.source.analy.model.Person"/>  -->
+ 	
+ 	<!-- <bean id="car" class="com.source.analy.model.CarFactoryBean" >
+ 		<property name="carInfo" value="超级跑车,400,40000">
+ 		</property>
+ 	</bean> -->
+ 	
+  	<!-- <bean id="normalCarFactory" class="com.source.analy.factoryBean.NormalCarFactoryBean"/>
+ 	
+ 	<bean id="normalCar" factory-bean="normalCarFactory" factory-method="getNormalCar"/> -->
+ 	
+ 	<bean id="normalStaticCar" class="com.source.analy.factoryBean.NormalCarFactoryBean"  factory-method="getStaticNormalCar"></bean> 
+ 	<!-- <bean id="diyFirstBeanPostProcessor" class="com.source.analy.diyBeanPostProcessor.DiyFirstBeanPostProcessor"/> -->
+ 	
+ 	<!-- <bean id="user" class="com.source.analy.model.User" autowire="byType">
+ 		 <property name="p" ref="person"/>
+ 	</bean> --> 
+ 	
+ 	<!-- <bean id="carimplmentFactoryBean" class="com.source.analy.factoryBean.NormalCarFactoryBeanImplInterface"/> -->
+ 	
+ 	 <!-- <bean id="testa" class="com.source.analy.circleDependceModel.TestA" scope="singleton">
+ 		<property name="testb" ref="testb"/>
+ 	</bean>
+ 	
+ 	<bean id="testb" class="com.source.analy.circleDependceModel.TestB" scope="singleton">
+ 		<property name="testc" ref="testc"/>
+ 	</bean>
+ 	
+ 	<bean id="testc" class="com.source.analy.circleDependceModel.TestC" scope="singleton">
+ 		<property name="testa" ref="testa"/>
+ 	</bean>  -->
+ 	
+ 	
+ 	<!-- <bean id="diyPojo" class="com.source.analy.diyAnnotation.DiyPojo"/> -->
+ 	
+ 	<bean class="com.source.analy.diyBeanFactoryPostProcessor.DiyFirstBeanFactoryPostProcessor"></bean> 
+ 	 	<!--  <import resource="diyApplication.xml"/>  -->
+ 	 <!-- <import resource="spring-aop.xml"/> -->
+ 	 <bean class="com.source.analy.processor.MyDiyProcessor"/> 
+ 	 
+ 	<!--  <bean id="car"></bean> -->
+ </beans>
